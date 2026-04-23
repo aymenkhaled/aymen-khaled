@@ -5,9 +5,9 @@ const AboutMeText = () => {
     <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
       <h2 className="text-6xl text-cyan mb-10">About Me</h2>
       <p>
-        I am Aymen, a Full Stack Web and Mobile Developer specialized in SaaS and AI integrations.
-        I have shipped production tools used by real teams, including a multi-tenant AI strategy platform,
-        an AI assistant suite, and a sales meeting automation product.
+        I am Aymen, a Full-Stack AI/SaaS Developer building production platforms with React,
+        Node.js, Python, and AI integrations. I have shipped tools used by real teams, including
+        a multi-tenant AI strategy platform, an AI assistant suite, and a sales meeting automation product.
       </p>
       <p className="mt-4">
         I work across frontend, backend, and automation pipelines: React and Next.js on the frontend,

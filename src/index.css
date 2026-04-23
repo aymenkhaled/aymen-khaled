@@ -5,4 +5,9 @@
 
 body {
   @apply bg-darkBrown;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 32rem),
+    radial-gradient(circle at 80% 20%, rgba(52, 211, 153, 0.11), transparent 28rem),
+    #08111f;
+  color: #f8fafc;
 }

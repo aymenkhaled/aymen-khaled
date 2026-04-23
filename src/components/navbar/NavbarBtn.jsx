@@ -6,7 +6,7 @@ const NavbarBtn = () => {
     href="/Aymen_Khaled_CV.pdf"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 rounded-full text-xl font-bold font-body text-white border-cyan border flex items-center gap-1 bg-gradient-to-r from-darkCyan to-orange transition-all duration-500 hover:scale-110 hover:border-orange cursor-pointer hover:shadow-cyanShadow"
+    className="px-4 py-2 rounded-full text-lg font-bold font-body text-black border-orange border flex items-center gap-1 bg-orange transition-all duration-300 hover:-translate-y-0.5 hover:bg-lightOrange cursor-pointer"
   >
     View CV
     <div className="sm:hidden md:block">

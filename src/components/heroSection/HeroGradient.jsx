@@ -1,10 +1,8 @@
-const HeroGradient = () => {
+﻿const HeroGradient = () => {
   return (
-    <div>
-      <div className="  shadow-cyanMediumShadow absolute top-0 right-[400px] -z-10 animate-pulse"></div>
-      <div className="  shadow-cyanMediumShadow absolute top-[5%] left-0 -z-10 opacity-50"></div>
-      <div className="  shadow-orangeMediumShadow absolute top-0 right-0 -z-10 animate-pulse"></div>
-      <div className="  shadow-orangeMediumShadow absolute top-[10%] left-0 -z-10 opacity-50 "></div>
+    <div aria-hidden="true">
+      <div className="absolute left-[-10%] top-[-12%] -z-10 h-[420px] w-[420px] rounded-full bg-cyan/10 blur-[120px]" />
+      <div className="absolute right-[-8%] top-[8%] -z-10 h-[360px] w-[360px] rounded-full bg-orange/10 blur-[110px]" />
     </div>
   );
 };

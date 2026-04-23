@@ -1,78 +1,54 @@
-import { BsFillArrowUpRightCircleFill, BsGithub } from "react-icons/bs";
+﻿import { BsFillArrowUpRightCircleFill, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 
-const SingleProject = ({
-  name,
-  year,
-  align,
-  image,
-  liveDemo,
-  github,
-  role,
-  impact,
-  visibility,
-}) => {
+const SingleProject = ({ project, index }) => {
   return (
-    <motion.div
-      variants={fadeIn("top", 0)}
+    <motion.article
+      variants={fadeIn("up", `0.${index % 4}`)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.1 }}
-      className={`flex w-full sm:flex-col-reverse items-center gap-8 ${
-        align === "left" ? "md:flex-row" : "md:flex-row-reverse"
-      } justify-end sm:flex-col`}
+      viewport={{ once: false, amount: 0.15 }}
+      className="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] shadow-2xl backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:border-cyan/50"
     >
-      <div className="space-y-2">
-        <h2 className="md:text-3xl sm:text-2xl text-orange">{name}</h2>
-        <h2
-          className={`text-xl font-thin text-white font-special sm:text-center ${
-            align === "left" ? "md:text-right" : "md:text-left"
-          }`}
-        >
-          {year}
-        </h2>
-        <p className="text-sm text-lightGrey">
-          <span className="text-cyan font-semibold">Role:</span> {role}
-        </p>
-        <p className="text-sm text-lightGrey">
-          <span className="text-cyan font-semibold">Impact:</span> {impact}
-        </p>
-        <p className="text-xs text-lightBrown uppercase tracking-wide">{visibility}</p>
+      <div className="relative aspect-video overflow-hidden bg-lightBrown">
+        <img src={project.image} alt={`${project.name} screenshot`} className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105" />
+        <div className="absolute left-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-bold text-orange backdrop-blur">
+          {project.year}
+        </div>
+        <div className="absolute right-3 top-3 rounded-full bg-black/70 px-3 py-1 text-xs font-bold text-cyan backdrop-blur">
+          {project.visibility}
+        </div>
+      </div>
 
-        <div
-          className={`flex gap-6 text-lg mt-2 ${
-            align === "left" ? "md:justify-end" : "md:justify-start"
-          }`}
-        >
-          {liveDemo && (
-            <a
-              href={liveDemo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
-            >
-              Live Demo <BsFillArrowUpRightCircleFill />
+      <div className="flex flex-1 flex-col p-5">
+        <h3 className="text-2xl font-bold leading-tight text-white">{project.name}</h3>
+        <p className="mt-2 text-sm font-semibold text-orange">{project.role}</p>
+        <p className="mt-4 text-sm leading-relaxed text-lightGrey">{project.impact}</p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.stack.map((item) => (
+            <span key={item} className="rounded-full border border-white/10 bg-black/20 px-3 py-1 text-xs font-semibold text-lightGrey">
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-auto flex flex-wrap gap-4 border-t border-white/10 pt-5 text-sm font-bold">
+          {project.liveDemo && (
+            <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cyan transition-all duration-300 hover:text-orange">
+              Live <BsFillArrowUpRightCircleFill />
             </a>
           )}
-
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex gap-2 items-center text-cyan hover:text-orange transition-all duration-500 cursor-pointer"
-            >
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-cyan transition-all duration-300 hover:text-orange">
               GitHub <BsGithub />
             </a>
           )}
+          {!project.liveDemo && !project.github && <span className="text-lightGrey">Private work - details available in interview</span>}
         </div>
       </div>
-      <div className="max-h-[220px] max-w-[400px] rounded-xl overflow-hidden hover:scale-110 transform transition-all duration-500 relative border border-white">
-        <div className="w-full h-full bg-cyan opacity-50 absolute top-0 left-0 hover:opacity-0 transition-all duration-500 md:block sm:hidden" />
-        <img src={image} alt={`${name} screenshot`} className="w-full h-full" />
-      </div>
-    </motion.div>
+    </motion.article>
   );
 };
 

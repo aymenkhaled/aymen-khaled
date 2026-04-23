@@ -48,7 +48,7 @@ const ContactForm = () => {
           name="from_name"
           placeholder="Your Name"
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-xl border border-white/10 bg-black/30 px-4 text-white outline-none transition-all duration-300 placeholder:text-lightGrey focus:border-cyan"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -57,7 +57,7 @@ const ContactForm = () => {
           name="from_email"
           placeholder="Your Email"
           required
-          className="h-12 rounded-lg bg-lightBrown px-2"
+          className="h-12 rounded-xl border border-white/10 bg-black/30 px-4 text-white outline-none transition-all duration-300 placeholder:text-lightGrey focus:border-cyan"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -67,14 +67,14 @@ const ContactForm = () => {
           cols="50"
           placeholder="Message"
           required
-          className="rounded-lg bg-lightBrown p-2"
+          className="rounded-xl border border-white/10 bg-black/30 p-4 text-white outline-none transition-all duration-300 placeholder:text-lightGrey focus:border-cyan"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
         <button
           type="submit"
           disabled={isSending}
-          className="w-full rounded-lg border border-cyan text-white h-12 font-bold text-xl hover:bg-darkCyan bg-cyan transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full rounded-xl border border-orange bg-orange text-black h-12 font-bold text-xl hover:bg-lightOrange transition-all duration-500 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {isSending ? "Sending..." : "Send"}
         </button>

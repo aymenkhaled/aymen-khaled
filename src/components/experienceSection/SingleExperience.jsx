@@ -8,12 +8,12 @@ const SingleExperience = ({ experience }) => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.7 }}
-      className="w-full border-2 border-orange border-dashed rounded-2xl p-4 h-full"
+      className="w-full border border-white/10 bg-white/[0.04] rounded-3xl p-5 h-full shadow-xl backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-cyan/50"
     >
       <p className="font-bold text-cyan">{experience.job}</p>
-      <p className="text-orange">{experience.company}</p>
+      <p className="text-orange text-lg">{experience.company}</p>
       <p className="text-lightGrey text-sm">{experience.date}</p>
-      <ul className="list-disc mt-4 pl-4 text-sm leading-relaxed">
+      <ul className="list-disc mt-4 pl-4 text-sm leading-relaxed text-lightGrey">
         {experience.responsibilities.map((resp, index) => {
           return <li key={index} className="mb-1">{resp}</li>;
         })}

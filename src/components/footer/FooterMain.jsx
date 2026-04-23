@@ -1,4 +1,4 @@
-import { Link } from "react-scroll";
+﻿import { Link } from "react-scroll";
 
 const FooterMain = () => {
   const currentYear = new Date().getFullYear();
@@ -18,6 +18,10 @@ const FooterMain = () => {
     {
       name: "Projects",
       section: "projects",
+    },
+    {
+      name: "Education",
+      section: "credentials",
     },
   ];
   return (
@@ -43,10 +47,11 @@ const FooterMain = () => {
         </ul>
       </div>
       <p className="max-w-[1200px] mx-auto text-right mt-2 mb-12 text-sm text-lightBrown">
-        {`© ${currentYear} Aymen Khaled | All Rights Reserved.`}
+        {`(c) ${currentYear} Aymen Khaled | All Rights Reserved.`}
       </p>
     </div>
   );
 };
 
 export default FooterMain;
+

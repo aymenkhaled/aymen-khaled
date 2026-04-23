@@ -1,4 +1,4 @@
-import { FaReact, FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaJava, FaPhp, FaReact, FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   SiNodedotjs,
@@ -7,9 +7,16 @@ import {
   SiMongodb,
   SiPostgresql,
   SiOpenai,
+  SiSocketdotio,
   SiFastapi,
   SiDjango,
+  SiExpress,
+  SiLaravel,
+  SiFirebase,
+  SiJenkins,
+  SiExpo,
 } from "react-icons/si";
+import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb";
 import { TbBrandReactNative } from "react-icons/tb";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
@@ -18,18 +25,29 @@ import { fadeIn } from "../../framerMotion/variants";
 const skills = [
   { skill: "JavaScript", icon: IoLogoJavascript },
   { skill: "TypeScript", icon: SiTypescript },
+  { skill: "C#", icon: TbBrandCSharp },
+  { skill: "PHP", icon: FaPhp },
+  { skill: "Java", icon: FaJava },
+  { skill: "C++", icon: TbBrandCpp },
   { skill: "ReactJS", icon: FaReact },
   { skill: "React Native", icon: TbBrandReactNative },
   { skill: "NextJS", icon: SiNextdotjs },
   { skill: "TailwindCSS", icon: RiTailwindCssFill },
   { skill: "NodeJS", icon: SiNodedotjs },
+  { skill: "Express", icon: SiExpress },
+  { skill: "Laravel", icon: SiLaravel },
   { skill: "Python", icon: FaPython },
   { skill: "FastAPI", icon: SiFastapi },
   { skill: "Django", icon: SiDjango },
   { skill: "MongoDB", icon: SiMongodb },
   { skill: "PostgreSQL", icon: SiPostgresql },
+  { skill: "Firebase", icon: SiFirebase },
   { skill: "OpenAI", icon: SiOpenai },
+  { skill: "Groq", icon: () => <span className="text-4xl font-black text-orange">GQ</span> },
+  { skill: "WebSocket", icon: SiSocketdotio },
   { skill: "Docker", icon: FaDocker },
+  { skill: "Jenkins", icon: SiJenkins },
+  { skill: "Expo", icon: SiExpo },
   { skill: "Git", icon: FaGitAlt },
 ];
 

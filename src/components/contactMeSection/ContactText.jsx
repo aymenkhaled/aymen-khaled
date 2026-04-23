@@ -2,10 +2,10 @@ const ContactText = () => {
   return (
     <div>
       <h2 className="text-orange text-3xl mb-4">Get In Touch</h2>
-      <p>
-        Open to freelance projects and full-time opportunities.
+      <p className="text-lightGrey leading-relaxed">
+        Open to full-time AI/SaaS roles, freelance projects, and technical collaborations.
         <br />
-        Reach out and I will get back to you quickly.
+        Reach out by form, email, WhatsApp, LinkedIn, Upwork, or Calendly.
       </p>
     </div>
   );
