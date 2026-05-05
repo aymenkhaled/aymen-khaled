@@ -1,5 +1,5 @@
 import SingleSkill from "./SingleSkill";
-import { FaJava, FaPhp, FaReact, FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaPython, FaDocker, FaGitAlt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   SiNodedotjs,
@@ -19,7 +19,6 @@ import {
   SiJenkins,
   SiExpo,
 } from "react-icons/si";
-import { TbBrandCSharp, TbBrandCpp } from "react-icons/tb";
 import { TbBrandReactNative } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
@@ -27,10 +26,6 @@ import { fadeIn } from "../../framerMotion/variants";
 const skills = [
   { skill: "JavaScript", icon: IoLogoJavascript },
   { skill: "TypeScript", icon: SiTypescript },
-  { skill: "C#", icon: TbBrandCSharp },
-  { skill: "PHP", icon: FaPhp },
-  { skill: "Java", icon: FaJava },
-  { skill: "C++", icon: TbBrandCpp },
   { skill: "ReactJS", icon: FaReact },
   { skill: "React Native", icon: TbBrandReactNative },
   { skill: "Redux", icon: SiRedux },
